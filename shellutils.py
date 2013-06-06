@@ -1,4 +1,5 @@
 import sys
+from termios import tcflush, TCIOFLUSH
 
 
 def yes_no(question, default="yes"):
@@ -25,6 +26,7 @@ def yes_no(question, default="yes"):
 
     while True:
         sys.stdout.write(question + prompt)
+        tcflush(sys.stdin, TCIOFLUSH)
         choice = raw_input().lower()
         if default is not None and choice == '':
             return valid[default]

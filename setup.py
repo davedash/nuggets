@@ -13,7 +13,7 @@ py_modules = [os.path.splitext(f)[0]
 
 setup(
     name='nuggets',
-    version='0.1',
+    version='0.2',
     py_modules=py_modules,
     description="Little utilities that don't deserve a package",
     long_description=open('README.md').read(),
